@@ -52,6 +52,12 @@ text and translations yourself.
 The vendor table is the part that only the community can get right, and it decays with every firmware
 update. If you have a physical device, you can improve sbriga a lot with a few minutes:
 
+The quickest way is the demo app: run `./gradlew :sample:installDebug`, tap each vendor screen to see
+which ones open, press **Copy report** and paste it in a
+[vendor screen report](../../issues/new?template=vendor-report.yml). See [CONTRIBUTING](CONTRIBUTING.md).
+
+To find the right component by hand:
+
 1. Find the settings screen that controls autostart or background battery use on your phone.
 2. Check which component opens it (for example with `adb shell dumpsys activity activities` while the
    screen is in front, or `adb shell dumpsys window | grep mCurrentFocus`).

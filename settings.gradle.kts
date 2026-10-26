@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "sbriga"
 include(":sbriga-core")
+include(":sample")

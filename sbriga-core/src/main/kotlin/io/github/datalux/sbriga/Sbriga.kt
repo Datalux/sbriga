@@ -5,7 +5,9 @@ import android.content.Context
 /** Entry point: find out whether this app's background work is being limited, and why. */
 public class Sbriga(context: Context, rules: VendorRules? = null) {
     private val appContext = context.applicationContext
-    private val rules: VendorRules = rules ?: loadBundledRules(appContext)
+
+    /** The vendor table in use: the one passed in, or the bundled one. */
+    public val rules: VendorRules = rules ?: loadBundledRules(appContext)
 
     /** Collects the current device state and diagnoses it. Cheap; safe to call at app start. */
     public fun diagnose(): Diagnosis = Diagnoser.diagnose(SnapshotCollector(appContext).collect())

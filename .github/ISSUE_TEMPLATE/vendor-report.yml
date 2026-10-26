@@ -1,0 +1,44 @@
+name: Vendor screen report
+description: Tell us which settings screen works (or no longer works) on your phone
+title: "[vendor] <manufacturer> <model>"
+labels: ["vendor-table"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping the vendor table. The quickest way is to run the **sbriga demo app**
+        (`sample/`) on your phone, tap each vendor screen, then use **Copy report** and paste it below.
+  - type: textarea
+    id: report
+    attributes:
+      label: Report from the demo app
+      description: Paste the copied report. It contains your device model and OS version, nothing personal.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Phone OS name and version
+      description: For example HyperOS 2.0, One UI 7, ColorOS 15, EMUI 12, OriginOS 5.
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened
+      options:
+        - A screen opened and it was the right one
+        - A screen opened but it was the wrong one
+        - Nothing opened or the app was sent to the fallback
+        - The app crashed
+    validations:
+      required: true
+  - type: textarea
+    id: component
+    attributes:
+      label: Right component, if you found it
+      description: Package and activity class that controls autostart or background battery use (see the README for how to find it with adb).
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

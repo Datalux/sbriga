@@ -11,7 +11,10 @@ public data class SettingsCandidate(
     val packageName: String,
     val className: String,
     val verified: Boolean,
-)
+) {
+    /** `package/class`, the form used in reports and issues. */
+    val component: String get() = "$packageName/$className"
+}
 
 /** Vendor settings screens, loaded from JSON so they can be updated without a new library release. */
 public class VendorRules internal constructor(private val byVendor: Map<Vendor, List<SettingsCandidate>>) {

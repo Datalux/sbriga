@@ -1,0 +1,13 @@
+[versions]
+agp = "8.13.0"
+kotlin = "2.2.20"
+junit = "4.13.2"
+orgJson = "20250517"
+
+[libraries]
+junit = { module = "junit:junit", version.ref = "junit" }
+org-json = { module = "org.json:json", version.ref = "orgJson" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

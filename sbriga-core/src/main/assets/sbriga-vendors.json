@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "note": "Component names are undocumented and change across OS versions. verified=false means taken from community lists and not yet confirmed on a device.",
+  "vendors": {
+    "xiaomi": [
+      { "target": "AUTOSTART", "package": "com.miui.securitycenter", "class": "com.miui.permcenter.autostart.AutoStartManagementActivity", "verified": false }
+    ],
+    "huawei": [
+      { "target": "AUTOSTART", "package": "com.huawei.systemmanager", "class": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity", "verified": false },
+      { "target": "AUTOSTART", "package": "com.huawei.systemmanager", "class": "com.huawei.systemmanager.optimize.process.ProtectActivity", "verified": false }
+    ],
+    "oppo": [
+      { "target": "AUTOSTART", "package": "com.coloros.safecenter", "class": "com.coloros.safecenter.permission.startup.StartupAppListActivity", "verified": false },
+      { "target": "AUTOSTART", "package": "com.oppo.safe", "class": "com.oppo.safe.permission.startup.StartupAppListActivity", "verified": false }
+    ],
+    "vivo": [
+      { "target": "AUTOSTART", "package": "com.vivo.permissionmanager", "class": "com.vivo.permissionmanager.activity.BgStartUpManagerActivity", "verified": false },
+      { "target": "AUTOSTART", "package": "com.iqoo.secure", "class": "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity", "verified": false }
+    ],
+    "samsung": [
+      { "target": "BATTERY", "package": "com.samsung.android.lool", "class": "com.samsung.android.sm.battery.ui.BatteryActivity", "verified": false }
+    ],
+    "oneplus": [
+      { "target": "AUTOSTART", "package": "com.oneplus.security", "class": "com.oneplus.security.chainlaunch.view.ChainLaunchAppListActivity", "verified": false }
+    ],
+    "asus": [
+      { "target": "AUTOSTART", "package": "com.asus.mobilemanager", "class": "com.asus.mobilemanager.autostart.AutoStartActivity", "verified": false }
+    ]
+  }
+}
